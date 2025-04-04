@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple - Products</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .product-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .filter-btn.active {
+            background-color: #2563eb;
+            color: white;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation (Same as index.html) -->
+    <nav class="bg-gray-900 text-white sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <i class="fab fa-apple text-2xl"></i>
+                    </div>
+                    <div class="hidden md:block">
+                        <div class="ml-10 flex items-baseline space-x-4">
+                            <a href="index.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Home</a>
+                            <a href="products.html" class="px-3 py-2 rounded-md text-sm font-medium bg-gray-800 text-white">Products</a>
+                            <a href="support.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Support</a>
+                            <a href="about.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">About</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <button class="p-1 rounded-full text-gray-400 hover:text-white focus:outline-none">
+                        <i class="fas fa-shopping-bag"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Product Showcase -->
+    <section class="py-12 px-4 max-w-7xl mx-auto">
+        <h1 class="text-4xl font-bold text-center mb-8">Our Products</h1>
+        
+        <!-- Filter Controls -->
+        <div class="flex flex-wrap justify-center gap-2 mb-12">
+            <button class="filter-btn active px-4 py-2 rounded-full border border-gray-300 hover:bg-blue-600 hover:text-white hover:border-blue-600 transition" data-filter="all">
+                All Products
+            </button>
+            <button class="filter-btn px-4 py-2 rounded-full border border-gray-300 hover:bg-blue-600 hover:text-white hover:border-blue-600 transition" data-filter="iphone">
+                iPhone
+            </button>
+            <button class="filter-btn px-4 py-2 rounded-full border border-gray-300 hover:bg-blue-600 hover:text-white hover:border-blue-600 transition" data-filter="mac">
+                Mac
+            </button>
+            <button class="filter-btn px-4 py-2 rounded-full border border-gray-300 hover:bg-blue-600 hover:text-white hover:border-blue-600 transition" data-filter="ipad">
+                iPad
+            </button>
+            <button class="filter-btn px-4 py-2 rounded-full border border-gray-300 hover:bg-blue-600 hover:text-white hover:border-blue-600 transition" data-filter="watch">
+                Watch
+            </button>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="product-grid">
+            <!-- iPhone 15 Pro -->
+            <div class="product-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300" data-category="iphone">
+                <div class="relative">
+                    <img src="https://images.pexels.com/photos/788946/pexels-photo-788946.jpeg" alt="iPhone 15 Pro" class="w-full h-64 object-cover">
+                    <span class="absolute top-2 right-2 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded">New</span>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">iPhone 15 Pro</h3>
+                    <p class="text-gray-600 mb-4">Titanium. So strong. So light. So Pro.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="font-bold text-lg">From $999</span>
+                        <button class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-full text-sm transition duration-300">
+                            Buy
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- MacBook Pro -->
+            <div class="product-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300" data-category="mac">
+                <img src="https://images.pexels.com/photos/18105/pexels-photo.jpg" alt="MacBook Pro" class="w-full h-64 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">MacBook Pro 14"</h3>
+                    <p class="text-gray-600 mb-4">Mind-blowing. Head-turning.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="font-bold text-lg">From $1,999</span>
+                        <button class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-full text-sm transition duration-300">
+                            Buy
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- iPad Pro -->
+            <div class="product-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300" data-category="ipad">
+                <img src="https://images.pexels.com/photos/1334597/pexels-photo-1334597.jpeg" alt="iPad Pro" class="w-full h-64 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">iPad Pro</h3>
+                    <p class="text-gray-600 mb-4">Supercharged by M2</p>
+                    <div class="flex justify-between items-center">
+                        <span class="font-bold text-lg">From $799</span>
+                        <button class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-full text-sm transition duration-300">
+                            Buy
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Apple Watch -->
+            <div class="product-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300" data-category="watch">
+                <div class="relative">
+                    <img src="https://images.pexels.com/photos/437037/pexels-photo-437037.jpeg" alt="Apple Watch" class="w-full h-64 object-cover">
+                    <span class="absolute top-2 right-2 bg-blue-600 text-white text-xs font-bold px-2 py-1 rounded">Best Seller</span>
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">Apple Watch Series 8</h3>
+                    <p class="text-gray-600 mb-4">A healthy leap ahead.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="font-bold text-lg">From $399</span>
+                        <button class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-full text-sm transition duration-300">
+                            Buy
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- iPhone 14 -->
+            <div class="product-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300" data-category="iphone">
+                <img src="https://images.pexels.com/photos/1092644/pexels-photo-1092644.jpeg" alt="iPhone 14" class="w-full h-64 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">iPhone 14</h3>
+                    <p class="text-gray-600 mb-4">Big and bigger.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="font-bold text-lg">From $799</span>
+                        <button class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-full text-sm transition duration-300">
+                            Buy
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- iMac -->
+            <div class="product-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300" data-category="mac">
+                <img src="https://images.pexels.com/photos/1779487/pexels-photo-1779487.jpeg" alt="iMac" class="w-full h-64 object-cover">
+                <div class="p-6">
+                    <h3 class="text-xl font-semibold mb-2">iMac 24"</h3>
+                    <p class="text-gray-600 mb-4">Say hello to the new iMac.</p>
+                    <div class="flex justify-between items-center">
+                        <span class="font-bold text-lg">From $1,299</span>
+                        <button class="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-full text-sm transition duration-300">
+                            Buy
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (Same as index.html) -->
+    <footer class="bg-gray-900 text-white py-12 px-4">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Shop and Learn</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-400 hover:text-white">Store</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Mac</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">iPad</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">iPhone</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Services</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-400 hover:text-white">Apple Music</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Apple TV+</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Apple Fitness+</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Apple Store</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-400 hover:text-white">Find a Store</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Genius Bar</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Today at Apple</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold mb-4">About Apple</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-400 hover:text-white">Newsroom</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Apple Leadership</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Career Opportunities</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto mt-8 pt-8 border-t border-gray-800">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">Copyright © 2023 Apple Inc. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Product filtering functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const productItems = document.querySelectorAll('.product-card');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Update active state
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    button.classList.add('active');
+
+                    const filterValue = button.getAttribute('data-filter');
+
+                    // Filter products
+                    productItems.forEach(item => {
+                        if (filterValue === 'all' || item.getAttribute('data-category') === filterValue) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+</body>
+</html>
