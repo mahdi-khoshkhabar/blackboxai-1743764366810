@@ -1,0 +1,308 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Apple - About</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .timeline-item:not(:last-child)::after {
+            content: '';
+            position: absolute;
+            left: 7px;
+            top: 24px;
+            height: 100%;
+            width: 2px;
+            background: #e5e7eb;
+        }
+        .team-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .parallax {
+            background-attachment: fixed;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+        }
+    </style>
+</head>
+<body class="bg-gray-50">
+    <!-- Navigation -->
+    <nav class="bg-gray-900 text-white sticky top-0 z-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <div class="flex items-center">
+                    <div class="flex-shrink-0">
+                        <i class="fab fa-apple text-2xl"></i>
+                    </div>
+                    <div class="hidden md:block">
+                        <div class="ml-10 flex items-baseline space-x-4">
+                            <a href="index.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Home</a>
+                            <a href="products.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Products</a>
+                            <a href="support.html" class="px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:bg-gray-700 hover:text-white">Support</a>
+                            <a href="about.html" class="px-3 py-2 rounded-md text-sm font-medium bg-gray-800 text-white">About</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex items-center">
+                    <button class="p-1 rounded-full text-gray-400 hover:text-white focus:outline-none">
+                        <i class="fas fa-shopping-bag"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- About Hero -->
+    <section class="relative h-96 flex items-center justify-center text-center text-white">
+        <div class="absolute inset-0 bg-black opacity-50"></div>
+        <div class="parallax bg-fixed" style="background-image: url('https://images.pexels.com/photos/1068523/pexels-photo-1068523.jpeg');"></div>
+        <div class="relative z-10 px-4">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6">About Apple</h1>
+            <p class="text-xl md:text-2xl max-w-3xl mx-auto">Innovation that excites. Technology that empowers.</p>
+        </div>
+    </section>
+
+    <!-- Mission Section -->
+    <section class="py-20 px-4 bg-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-6">Our Mission</h2>
+            <p class="text-xl text-gray-600 mb-8">
+                "To bring the best user experience to its customers through innovative hardware, software, and services."
+            </p>
+            <div class="flex justify-center">
+                <div class="w-24 h-1 bg-blue-600"></div>
+            </div>
+        </div>
+    </section>
+
+    <!-- History Timeline -->
+    <section class="py-20 px-4 bg-gray-50">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Our History</h2>
+            
+            <div class="space-y-8">
+                <!-- Timeline Item 1 -->
+                <div class="timeline-item relative pl-8">
+                    <div class="absolute left-0 w-4 h-4 bg-blue-600 rounded-full"></div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold mb-2">1976 - Founded in a Garage</h3>
+                        <p class="text-gray-600">Apple Computer Company was founded by Steve Jobs, Steve Wozniak, and Ronald Wayne in Jobs' parents' garage in Los Altos, California.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="timeline-item relative pl-8">
+                    <div class="absolute left-0 w-4 h-4 bg-blue-600 rounded-full"></div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold mb-2">1984 - Macintosh Introduced</h3>
+                        <p class="text-gray-600">The Macintosh was introduced with a now-famous Super Bowl commercial directed by Ridley Scott, signaling a new era in personal computing.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div class="timeline-item relative pl-8">
+                    <div class="absolute left-0 w-4 h-4 bg-blue-600 rounded-full"></div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold mb-2">1998 - iMac Revolution</h3>
+                        <p class="text-gray-600">The colorful iMac G3 marked Apple's resurgence under Steve Jobs' return, combining computing power with consumer-friendly design.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 4 -->
+                <div class="timeline-item relative pl-8">
+                    <div class="absolute left-0 w-4 h-4 bg-blue-600 rounded-full"></div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold mb-2">2001 - iPod and Apple Stores</h3>
+                        <p class="text-gray-600">The iPod revolutionized digital music, while the first Apple Stores provided a new way to experience technology.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 5 -->
+                <div class="timeline-item relative pl-8">
+                    <div class="absolute left-0 w-4 h-4 bg-blue-600 rounded-full"></div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold mb-2">2007 - iPhone Debut</h3>
+                        <p class="text-gray-600">Steve Jobs introduced the iPhone as "three revolutionary products in one" - a widescreen iPod, phone, and internet communicator.</p>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 6 -->
+                <div class="timeline-item relative pl-8">
+                    <div class="absolute left-0 w-4 h-4 bg-blue-600 rounded-full"></div>
+                    <div class="bg-white p-6 rounded-lg shadow-md">
+                        <h3 class="text-xl font-bold mb-2">2020 - Apple Silicon</h3>
+                        <p class="text-gray-600">Apple began transitioning Macs to its own ARM-based processors, marking a new era of performance and efficiency.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="py-20 px-4 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Leadership Team</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Team Member 1 -->
+                <div class="team-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <img src="https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg" alt="Tim Cook" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-1">Tim Cook</h3>
+                        <p class="text-gray-500 mb-4">Chief Executive Officer</p>
+                        <p class="text-gray-600">Tim Cook is the CEO of Apple and serves on its board of directors. He joined Apple in 1998.</p>
+                    </div>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div class="team-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <img src="https://images.pexels.com/photos/3777943/pexels-photo-3777943.jpeg" alt="Katherine Adams" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-1">Katherine Adams</h3>
+                        <p class="text-gray-500 mb-4">Senior Vice President, General Counsel</p>
+                        <p class="text-gray-600">Katherine Adams oversees all legal matters, corporate governance, and government affairs.</p>
+                    </div>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div class="team-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <img src="https://images.pexels.com/photos/3777946/pexels-photo-3777946.jpeg" alt="Eddy Cue" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-1">Eddy Cue</h3>
+                        <p class="text-gray-500 mb-4">Senior Vice President, Services</p>
+                        <p class="text-gray-600">Eddy Cue leads Apple's services including Apple Music, Apple TV+, and iCloud.</p>
+                    </div>
+                </div>
+
+                <!-- Team Member 4 -->
+                <div class="team-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <img src="https://images.pexels.com/photos/3777940/pexels-photo-3777940.jpeg" alt="Craig Federighi" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-1">Craig Federighi</h3>
+                        <p class="text-gray-500 mb-4">Senior Vice President, Software Engineering</p>
+                        <p class="text-gray-600">Craig Federighi oversees the development of iOS, macOS, and related software.</p>
+                    </div>
+                </div>
+
+                <!-- Team Member 5 -->
+                <div class="team-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <img src="https://images.pexels.com/photos/3777942/pexels-photo-3777942.jpeg" alt="Deirdre O'Brien" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-1">Deirdre O'Brien</h3>
+                        <p class="text-gray-500 mb-4">Senior Vice President, Retail + People</p>
+                        <p class="text-gray-600">Deirdre O'Brien leads Apple's global retail stores and HR functions.</p>
+                    </div>
+                </div>
+
+                <!-- Team Member 6 -->
+                <div class="team-card bg-white rounded-lg shadow-md overflow-hidden transition duration-300">
+                    <img src="https://images.pexels.com/photos/3777941/pexels-photo-3777941.jpeg" alt="Jeff Williams" class="w-full h-64 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-1">Jeff Williams</h3>
+                        <p class="text-gray-500 mb-4">Chief Operating Officer</p>
+                        <p class="text-gray-600">Jeff Williams oversees Apple's entire supply chain, operations, and design teams.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Values Section -->
+    <section class="py-20 px-4 bg-gray-50">
+        <div class="max-w-4xl mx-auto">
+            <h2 class="text-3xl font-bold text-center mb-12">Our Values</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                <!-- Value 1 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-blue-600 text-3xl mb-4">
+                        <i class="fas fa-lightbulb"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Innovation</h3>
+                    <p class="text-gray-600">We believe in thinking differently and creating products that redefine categories.</p>
+                </div>
+
+                <!-- Value 2 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-blue-600 text-3xl mb-4">
+                        <i class="fas fa-lock"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Privacy</h3>
+                    <p class="text-gray-600">We design our products to protect your privacy and give you control over your information.</p>
+                </div>
+
+                <!-- Value 3 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-blue-600 text-3xl mb-4">
+                        <i class="fas fa-globe"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Environment</h3>
+                    <p class="text-gray-600">We're committed to leaving the world better than we found it through renewable energy and recycling.</p>
+                </div>
+
+                <!-- Value 4 -->
+                <div class="bg-white p-6 rounded-lg shadow-md">
+                    <div class="text-blue-600 text-3xl mb-4">
+                        <i class="fas fa-users"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-2">Accessibility</h3>
+                    <p class="text-gray-600">We believe technology should be accessible to everyone and design our products accordingly.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12 px-4">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Shop and Learn</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-400 hover:text-white">Store</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Mac</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">iPad</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">iPhone</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Services</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-400 hover:text-white">Apple Music</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Apple TV+</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Apple Fitness+</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold mb-4">Apple Store</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-400 hover:text-white">Find a Store</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Genius Bar</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Today at Apple</a></li>
+                </ul>
+            </div>
+            <div>
+                <h3 class="text-lg font-semibold mb-4">About Apple</h3>
+                <ul class="space-y-2">
+                    <li><a href="#" class="text-gray-400 hover:text-white">Newsroom</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Apple Leadership</a></li>
+                    <li><a href="#" class="text-gray-400 hover:text-white">Career Opportunities</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto mt-8 pt-8 border-t border-gray-800">
+            <div class="flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">Copyright © 2023 Apple Inc. All rights reserved.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    <a href="#" class="text-gray-400 hover:text-white"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
